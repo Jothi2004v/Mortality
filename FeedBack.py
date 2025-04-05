@@ -11,10 +11,10 @@ def show_feedback():
     SPREADSHEET_ID = "1xcLLgFT4mInFsNr4BoaxW8we-hxTGgSaYP0DnJdiWXc"
 
     # Load credentials from Streamlit secrets
-    credentials = service_account.Credentials.from_service_account_info(
-        st.secrets["google_service_account"],
-        scopes=["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
-    )
+   credentials = service_account.Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"],
+    scopes=["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
+)
 
     # Connect to Google Sheets
     spread = Spread(SPREADSHEET_ID, creds=credentials)
