@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "neonatal-mortality-rate",
+  "private_key_id": "944a3f09f9eab51da1af3a7da94ac494fed976ec",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCaNP1rCmxjSBro\n0o63BQqxEb69MkbfP6/uSQRzEbk8jAgZ2LSsy4teOeDYNTaEwSuyFV465XEr00h7\nknTf412aPRz+R+G0sWTnLKqZD9E1XCJAuV76xaHJeRUMh7AMNaXHdqjUjnA7Qkmk\nh0dsPdgFhnHN10/FXCtnBtCM9tob38l/PfJwWEXI454mM6kqDunlh5o0b59266cu\nxscxe9HcHHqGSxAOsQK6w3ef7s93kCFa+ZBe29LdOYYx/Jq3ai6gQfSPZ1DQFD21\n6QQE7HA4HAz6JsX4QCBGIIxj80+j4yFheOnWRqLUSL29V38hwJW9F9JObS06Wpwe\n/hd8l27bAgMBAAECggEAAsQtQPdTPHC1st7cGo0SRQeUIWFpLhC+v4qQdDP+27GI\nulX4im+tqgdlxjB7hY7QPDCam88z5DJfxtUOGFoZesPaj6E10P+sV2KmE3raKO05\n3BQMj85tzucc0+MMlcYnRC3CbOsP47BBEUeFUNFx3PTYI8uCAytacqMHqLpg7UZj\nqQtwrek9I3honZuHW6R9/UBWwmB2eZVf9UFpB7RowRtdLb1USrOzC53URj8CK99a\nmlkElZEuz0y2auuoHNcKBZoHxCMJ05JYebbX5eIgBv6cZiBX0lwDUe/YRyaR/pkP\ndAPA3SVZkAPlSs3QKo4IgExtk7mYKwuQLTj4U3W2wQKBgQDG1e17ckzvTDOIidFZ\noEKlDCdRsMS8d4fS8xw09K27ZB/x5QA/tUn+sv5Jr3UFqSVCG0dFHoX8rBiVA5x7\n14thxgMhDb3dUOx5NkqOs9kn35gGTDBNx9XAAeJzyBlXuHR5dDczf+OUEsE6EUXx\nkGLP7jX6AuHuIvEGHHFtAnAiYQKBgQDGinHXKS0mkrTbLZdNwkzSJsApun3q5inv\nYxI65SyizeYdsV4dNS945IWxcXdyg9U/aeCLSYgN+ceCSCBQH2t++gZ+jE00zCDc\np9VFLmAq2d1c0fKPsrzmaSbADwBCt05F2dUCbSGmvNtacBeVeMozC7jc1aHFOwld\ng7cUf/OSuwKBgHdiv6LdcGBGSrLyvSapWRqsf3dHQfk/c+gvXIJXX3EinyOoskuO\nWI17f79SgFsTwnE828Aeoaii1Ge0sWKSevgL4pkYHSYjjrkA5idkyUBtumQdnus0\nz5zoBMYsITtQX28FXpendEfWMvrgoDR40zux9erVjD5l8H4Q2fHwAtBBAoGBAIny\nIVzMiEl3v19WEv19FeEh+XxEzj5KgzKH1F/FYbkQdGWHGgwTKxPFO7rpSoPvY1g3\nGUPN6FFFjkBQGttwqUDFOYPtuasIdYC6v+zcZwb+7tYSLYV4O9Wfk8P36Edyk1jn\nHCAecTYnnAT/QvOgxGSpLV2KtWaTOVOXM7pzmGoHAoGASQpjtyecIkUilWlsrY+4\ny6B6WtLvKy6y2LCNH1G581rkAI9WkUj3Fz+MwZ0lTX0QnIIPJNkFoZPF3BJg/Jpa\naQ/0HVdQwfjDDr4fK58woRzHSBixKd7c3938O14U3GijRfdwPaKP4NOsVF/4r47+\nniFvQCphPnbZTY84D0u0aHs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gsheets-python-access@neonatal-mortality-rate.iam.gserviceaccount.com",
+  "client_id": "110743075498033830453",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gsheets-python-access%40neonatal-mortality-rate.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
