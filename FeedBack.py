@@ -21,6 +21,8 @@ def show_feedback():
         st.warning("⚠️ No internet connection. Please connect to the network and try again.")
         return
 
+    # Establish Google Sheets connection
+    SERVICE_ACCOUNT_FILE = "NMR.json"
     SPREADSHEET_ID = "1xcLLgFT4mInFsNr4BoaxW8we-hxTGgSaYP0DnJdiWXc"
 
     service_account_info = st.secrets["connections"]["gsheets"]
@@ -28,7 +30,7 @@ def show_feedback():
     credentials = service_account.Credentials.from_service_account_info(
         service_account_info,
          scopes=["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
-        )
+    )
 
     # Connect to the Google Sheet
     spread = Spread(SPREADSHEET_ID, creds=credentials)
