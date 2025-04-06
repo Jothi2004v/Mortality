@@ -25,7 +25,8 @@ def show_feedback():
     SERVICE_ACCOUNT_FILE = "NMR.json"
     SPREADSHEET_ID = "1xcLLgFT4mInFsNr4BoaxW8we-hxTGgSaYP0DnJdiWXc"
 
-    service_account_info = st.secrets["connections"]["gsheets"]
+    with open("NMR.json", "r") as file:
+        service_account_info = json.load(file)
     # Load credentials
     credentials = service_account.Credentials.from_service_account_info(
         service_account_info,
