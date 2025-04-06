@@ -21,7 +21,6 @@ def show_feedback():
         st.warning("⚠️ No internet connection. Please connect to the network and try again.")
         return
 
-
     SPREADSHEET_ID = "1xcLLgFT4mInFsNr4BoaxW8we-hxTGgSaYP0DnJdiWXc"
 
     service_account_info = st.secrets["connections"]["gsheets"]
