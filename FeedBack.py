@@ -2,19 +2,18 @@ import streamlit as st
 import pandas as pd
 from gspread_pandas import Spread
 from google.oauth2 import service_account
-import requests
+import socket
 import json
 
-# Better internet check using HTTP instead of socket
 def is_connected():
     try:
-        requests.get("https://www.google.com", timeout=3)
+        socket.create_connection(("8.8.8.8", 53), timeout=3)
         return True
-    except requests.RequestException:
+    except OSError:
         return False
 
 def show_feedback():
-    st.header("***📋 FeedBack***")
+    st.header("***📋FeedBack***")
     st.markdown("**Please provide your feedback below.**")
 
     # Check for internet connection
@@ -24,25 +23,18 @@ def show_feedback():
 
     SPREADSHEET_ID = "1xcLLgFT4mInFsNr4BoaxW8we-hxTGgSaYP0DnJdiWXc"
 
-    try:
-        # Load credentials from Streamlit secrets
-        service_account_info = st.secrets["connections"]["gsheets"]
-        credentials = service_account.Credentials.from_service_account_info(
-            service_account_info,
-            scopes=[
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/drive"
-            ]
+    service_account_info = st.secrets["connections"]["gsheets"]
+    # Load credentials
+    credentials = service_account.Credentials.from_service_account_info(
+        service_account_info,
+         scopes=["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
         )
-    except Exception as e:
-        st.error(f"❌ Failed to load credentials: {e}")
-        return
 
+    # Connect to the Google Sheet
+    spread = Spread(SPREADSHEET_ID, creds=credentials)
+
+    # Read existing data
     try:
-        # Connect to the Google Sheet
-        spread = Spread(SPREADSHEET_ID, creds=credentials)
-
-        # Read existing data
         existing_data = spread.sheet_to_df(index=False).dropna(how="all")
     except Exception:
         existing_data = pd.DataFrame(columns=["Name", "Email", "Feedback"])
@@ -54,7 +46,7 @@ def show_feedback():
     with st.form(key="feedback_form"):
         name = st.text_input(label="👤 Name", placeholder="Enter your name")
         email = st.text_input(label="✉︎ Email", placeholder="Enter your email")
-        feedback = st.text_area(label="✍🏻 Feedback", placeholder="Write your feedback here...")
+        feedback = st.text_area(label="✍🏻Feedback", placeholder="Write your feedback here...")
 
         submit_button = st.form_submit_button(label="Submit Feedback")
 
