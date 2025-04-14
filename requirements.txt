@@ -1,5 +1,6 @@
 # Streamlit for web UI
 streamlit>=1.31.0
+streamlit-option-menu>=0.3.6
 
 # Data handling and manipulation
 pandas>=2.0.0
