@@ -16,9 +16,9 @@ statsmodels>=0.14.0
 # Plotting and visualizations
 matplotlib>=3.8.0
 seaborn>=0.13.0
-plotly>=5.18.0
+plotly>=5.18.0  # 👈 This is the missing module
 
-# Google Sheets integration (optional; remove if not needed)
+# Google Sheets integration (optional, remove if unused)
 gspread-pandas>=3.2.0
 gspread>=5.7.0
 google-auth>=2.24.0
